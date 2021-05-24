@@ -301,7 +301,7 @@ const defuser = {
 
 // Buy Tables T
 
-const terrpist = [deagle, glock, dual, tec9, p250, czauto ];
+const terrpist = [deagle, glock, dual, tec9, p250, czauto];
 const terrsmg = [mac10, mp7, ump45, p90, biz, mp5];
 const terrrifle = [kalah, galil, sg553, scout, awp, g3sg1];
 const terrgear = [kevlar, armor, molotov, decoy, flash, hegrenade, smoke ];

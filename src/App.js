@@ -2,7 +2,10 @@ import React, {Component, useState } from "react";
 import './App.css';
 import "./styles.scss";
 import "./buys.js";
-import "bootstrap";
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
+import ListGroup from 'react-bootstrap/ListGroup';
+
 
 
 
@@ -66,11 +69,38 @@ const Equipment = () => {
 }
 
 const Buymenu = () => {
-    return (
-        <div className="buy-menu">
+    const [show, setShow] = useState(false);
 
-        </div>
-    )
+    const handleBuyClose = () => setShow(false);
+    const handleBuyShow = () => setShow(true);
+
+    return (
+        <>
+            <Button variant="primary" onClick={handleBuyShow}>
+                BUY MENU
+            </Button>
+
+            <Modal show={show} onHide={handleBuyClose}>
+                <Modal.Header closeButton>
+                    <Modal.Title>BUY Menu</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>{terrpist.map((el, i) => {
+                    return <ListGroup.Item key={i} action variant="secondary">
+                        {el.name}
+                    </ListGroup.Item>
+                })}</Modal.Body>
+                <Modal.Footer>
+                    <Button variant="secondary" onClick={handleBuyClose}>
+                        Close
+                    </Button>
+                    <Button variant="primary" onClick={handleBuyClose}>
+                        Save Changes
+                    </Button>
+                </Modal.Footer>
+            </Modal>
+        </>
+    );
+
 }
 
 const Tplayer = () => {
