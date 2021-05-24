@@ -1,0 +1,22 @@
+.terrorist-team-bar {
+  display: flex;
+}
+
+.terro-player {
+  border: 3px transparent ;
+  border-radius: 15px;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding: 2vh 2vh 2vh 2vh;
+  background-color: rgba(204, 102, 129, 0.5);
+
+  h4{
+    text-align: center;
+  }
+
+}
+
+.card-body {
+  height: 20vh;
+  width: available;
+}
